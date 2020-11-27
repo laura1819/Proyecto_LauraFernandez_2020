@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1184,885.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="389.6,925.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="24">
+    <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -25,6 +25,8 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -56,6 +58,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="375.2,820.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -74,6 +77,7 @@
       <Variable x:TypeArguments="x:String" Name="var_humedad" />
       <Variable x:TypeArguments="x:String" Name="var_viento" />
       <Variable x:TypeArguments="x:Boolean" Name="var_eventosBoolean" />
+      <Variable x:TypeArguments="x:Boolean" Name="var_existeCorreo" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -96,44 +100,27 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="Mensaje">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_mensaje" />
         </InOutArgument>
+        <InOutArgument x:TypeArguments="x:Boolean" x:Key="existeCorreo">
+          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="var_existeCorreo" />
+        </InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke OpenAula workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\OpenAula.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="entregaUno">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_entregaUno" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="entregaDos">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_entregaDos" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="entregaTres">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_entregaTres" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:Boolean" x:Key="varEventos">
-          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="var_eventosBoolean" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="entregaUno">[var_entregaUno]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="entregaDos">[var_entregaDos]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="entregaTres">[var_entregaTres]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:Boolean" x:Key="varEventos">[var_eventosBoolean]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ElTiempo workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\ElTiempo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="grados">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_grados" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="lugar">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_localidad" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="elDiaEstara">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_elDiaEstara" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="precipitaciones">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_precipitaciones" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="humedad">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_humedad" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="viento">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_viento" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="grados">[var_grados]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="lugar">[var_localidad]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="elDiaEstara">[var_elDiaEstara]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="precipitaciones">[var_precipitaciones]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="humedad">[var_humedad]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="viento">[var_viento]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ElMarca workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\EscribirWord.xaml">
@@ -179,6 +166,9 @@
         </InArgument>
         <InArgument x:TypeArguments="x:Boolean" x:Key="arg_enevtosBoolean">
           <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="var_eventosBoolean" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="arg_existeCorreo">
+          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="var_existeCorreo" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
