@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OpenMail" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="800.8,1508" sap2010:WorkflowViewState.IdRef="OpenMail_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenMail" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1184.8,1752.8" sap2010:WorkflowViewState.IdRef="OpenMail_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
@@ -49,63 +49,42 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OpenMail" sap:VirtualizedContainerService.HintSize="476.8,1443.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OpenMail" sap:VirtualizedContainerService.HintSize="794.4,1648" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CorreoDe" />
       <Variable x:TypeArguments="x:String" Name="Asunto" />
       <Variable x:TypeArguments="x:String" Name="Mensaje" />
+      <Variable x:TypeArguments="x:Boolean" Name="existeCorreo" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,278.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /usuarios/es/servici...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="697d061b-4b73-4de7-8892-9c86ba4d3a78" InformativeScreenshot="d299af6f170a389502a98334bb381ecd" Selector="&lt;html app='chrome.exe' title='Zona de Usuarios' /&gt;&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;Correo Electrónico &amp;#x9;&amp;#x9;Este enlace se abrirá en una ventana nu*' tag='A' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,193.6" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /usuarios/es/servici...'" sap:VirtualizedContainerService.HintSize="752.8,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="697d061b-4b73-4de7-8892-9c86ba4d3a78" InformativeScreenshot="d299af6f170a389502a98334bb381ecd" Selector="&lt;html app='chrome.exe' title='Zona de Usuarios' /&gt;&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;Correo Electrónico &amp;#x9;&amp;#x9;Este enlace se abrirá en una ventana nu*' tag='A' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="752.8,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="752.8,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -127,7 +106,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="752.8,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -149,9 +128,9 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'SPAN'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_1">
-      <ui:GetFullText.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="673ffd24-d1c2-4157-9647-f94d54e16872" InformativeScreenshot="7a59d824680f3a7b2728f34b7f3fd1f4" Selector="&lt;html app='chrome.exe' title='Correo: LAURA FERNANDEZ FERNANDEZ - Outlook' /&gt;&lt;webctrl aaname='Laura Fernandez' parentid='AQAABlX0c94BAAAGkl8tRQAAAAA=' tag='SPAN' /&gt;">
+    <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[existeCorreo]" sap:VirtualizedContainerService.HintSize="752.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93d705a2-9252-405a-b248-67ee678e43de" InformativeScreenshot="49192aea40b7f1ac263ac612a464e9db" Selector="&lt;html app='chrome.exe' title='Correo: LAURA FERNANDEZ FERNANDEZ - Outlook' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='AQAABlX0c94BAAAGmOCZhwAAAAA=' tag='DIV' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -159,14 +138,71 @@
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
-      </ui:GetFullText.Target>
-      <ui:GetFullText.Text>
-        <OutArgument x:TypeArguments="x:String">[CorreoDe]</OutArgument>
-      </ui:GetFullText.Text>
-    </ui:GetFullText>
-    <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'SPAN'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_2">
-      <ui:GetFullText.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c43cc9c3-5aa0-41e9-8750-ae548aad2778" InformativeScreenshot="782f4209bed1207819dab055775e8ab8" Selector="&lt;html app='chrome.exe' title='Correo: LAURA FERNANDEZ FERNANDEZ - Outlook' /&gt;&lt;webctrl aaname='PruebasUiPath' parentid='AQAABlX0c94BAAAGkl8tRQAAAAA=' tag='SPAN' /&gt;">
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <If Condition="[existeCorreo]" sap:VirtualizedContainerService.HintSize="752.8,746.4" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="375.2,596.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_1">
+            <ui:GetFullText.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="673ffd24-d1c2-4157-9647-f94d54e16872" InformativeScreenshot="b37d6d14c72477e848e9077f55920ee0" Selector="&lt;html app='chrome.exe' title='Correo: * - Outlook' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='*=' tag='DIV' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:GetFullText.Target>
+            <ui:GetFullText.Text>
+              <OutArgument x:TypeArguments="x:String">[CorreoDe]</OutArgument>
+            </ui:GetFullText.Text>
+          </ui:GetFullText>
+          <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_2">
+            <ui:GetFullText.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c43cc9c3-5aa0-41e9-8750-ae548aad2778" InformativeScreenshot="782f4209bed1207819dab055775e8ab8" Selector="&lt;html app='chrome.exe' title='Correo: * - Outlook' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='*=' tag='DIV' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:GetFullText.Target>
+            <ui:GetFullText.Text>
+              <OutArgument x:TypeArguments="x:String">[Asunto]</OutArgument>
+            </ui:GetFullText.Text>
+          </ui:GetFullText>
+          <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_3">
+            <ui:GetFullText.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="858acd1f-0ffc-4c5b-9645-18901d9947fc" InformativeScreenshot="aa9ca4d18d5a3ae875b771480d64fb23" Selector="&lt;html app='chrome.exe' title='Correo: * - Outlook' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' isleaf='1' parentid='*=' tag='SPAN' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:GetFullText.Target>
+            <ui:GetFullText.Text>
+              <OutArgument x:TypeArguments="x:String">[Mensaje]</OutArgument>
+            </ui:GetFullText.Text>
+          </ui:GetFullText>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CorreoDe+ &quot; asun &quot; + Asunto+ &quot; mensaje &quot; + Mensaje]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;No tienes correos&quot;]" />
+      </If.Else>
+    </If>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="752.8,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="f4" KeyModifiers="Ctrl" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b3f410ee-a7f8-40ed-9418-bb8d38103ee3">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -174,26 +210,7 @@
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
-      </ui:GetFullText.Target>
-      <ui:GetFullText.Text>
-        <OutArgument x:TypeArguments="x:String">[Asunto]</OutArgument>
-      </ui:GetFullText.Text>
-    </ui:GetFullText>
-    <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'SPAN'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_3">
-      <ui:GetFullText.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="858acd1f-0ffc-4c5b-9645-18901d9947fc" InformativeScreenshot="aa9ca4d18d5a3ae875b771480d64fb23" Selector="&lt;html app='chrome.exe' title='Correo: LAURA FERNANDEZ FERNANDEZ - Outlook' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' isleaf='1' parentid='AQAABlX0c94BAAAGkl8tRQAAAAA=' tag='SPAN' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:GetFullText.Target>
-      <ui:GetFullText.Text>
-        <OutArgument x:TypeArguments="x:String">[Mensaje]</OutArgument>
-      </ui:GetFullText.Text>
-    </ui:GetFullText>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="435.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CorreoDe + Asunto + Mensaje]" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
   </Sequence>
 </Activity>

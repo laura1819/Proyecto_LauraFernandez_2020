@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ElTiempo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1184.8,1061.6" sap2010:WorkflowViewState.IdRef="ElTiempo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ElTiempo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1184,1124" sap2010:WorkflowViewState.IdRef="ElTiempo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
       <x:String>System.Activities</x:String>
@@ -48,19 +48,19 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ElTiempo" sap:VirtualizedContainerService.HintSize="508,996.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ElTiempo" sap:VirtualizedContainerService.HintSize="508,1059.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.4,904" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.google.com/search?q=el+tiempo&amp;rlz=1C1CHBD_esES888ES888&amp;oq=el+tiempo&amp;aqs=chrome.0.69i59l3j0i131i433l2j69i60l3.1743j1j7&amp;sourceid=chrome&amp;ie=UTF-8">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.4,966.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.google.com/search?q=el+tiempo&amp;rlz=1C1CHBD_esES888ES888&amp;oq=el+tiempo&amp;aqs=chrome.0.69i59l3j0i131i433l2j69i60l3.1743j1j7&amp;sourceid=chrome&amp;ie=UTF-8">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,801.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,864" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="tiempo" />
               <Variable x:TypeArguments="x:String" Name="lugar" />
@@ -120,6 +120,7 @@
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[lugar]" />
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[grados]" />
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[infoTiempo]" />
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
