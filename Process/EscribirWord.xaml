@@ -18,7 +18,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1184,2978.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1184,3018.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ElMarca_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -83,6 +83,13 @@
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Escribir en el Word" sap:VirtualizedContainerService.HintSize="1028,2913.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="var_pathFile">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\lfernandez\Documents\UiPath\Proyecto_LauraFernandez_2020\Plantilla\Plantilla_Laura_Proyecto.docx</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
