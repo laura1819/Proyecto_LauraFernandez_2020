@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="389.6,925.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1184,1039.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -61,7 +61,7 @@
       <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="375.2,820.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="375.2,974.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="var_grados" />
       <Variable x:TypeArguments="x:String" Name="var_localidad" />
@@ -91,18 +91,10 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\OpenMail.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="CorreoDe">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_correoDe" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="Asunto">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_asunto" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="Mensaje">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_mensaje" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:Boolean" x:Key="existeCorreo">
-          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="var_existeCorreo" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="CorreoDe">[var_correoDe]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="Asunto">[var_asunto]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="Mensaje">[var_mensaje]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:Boolean" x:Key="existeCorreo">[var_existeCorreo]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke OpenAula workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\OpenAula.xaml">
@@ -125,51 +117,26 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ElMarca workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\EscribirWord.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="arg_grados">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_grados" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="arg_localidad">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_localidad" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="arg_info">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="var_info" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_correoDe">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_correoDe" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_asunto">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_correoDe" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_mensaje">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_mensaje" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_entregaUno">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_entregaUno" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_entregaDos">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_entregaDos" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_entradaTres">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_entregaTres" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_elDiaEstara">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_elDiaEstara" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_precipitaciones">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_precipitaciones" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_humedad">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_humedad" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="arg_viento">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_viento" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="arg_enevtosBoolean">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="var_eventosBoolean" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="arg_existeCorreo">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="var_existeCorreo" />
-        </InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="arg_grados">[var_grados]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="arg_localidad">[var_localidad]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="arg_info">[var_info]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_correoDe">[var_correoDe]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_asunto">[var_correoDe]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_mensaje">[var_mensaje]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_entregaUno">[var_entregaUno]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_entregaDos">[var_entregaDos]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_entradaTres">[var_entregaTres]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_elDiaEstara">[var_elDiaEstara]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_precipitaciones">[var_precipitaciones]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_humedad">[var_humedad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="arg_viento">[var_viento]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="arg_enevtosBoolean">[var_eventosBoolean]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="arg_existeCorreo">[var_existeCorreo]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke convertirPDF workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\convertirPDF.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

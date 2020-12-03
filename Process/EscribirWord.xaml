@@ -19,7 +19,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1184,3260.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1184,2440.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ElMarca_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -83,7 +83,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Escribir en el Word" sap:VirtualizedContainerService.HintSize="1069.6,3156" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Escribir en el Word" sap:VirtualizedContainerService.HintSize="1028,2376" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\lfernandez\Documents\UiPath\Proyecto_LauraFernandez_2020\Plantilla\Plantilla_Laura_Proyecto.docx" Name="var_pathFile" />
     </Sequence.Variables>
@@ -92,42 +92,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="Plantilla\Plantilla_Laura_Proyecto.docx" sap:VirtualizedContainerService.HintSize="1028,3063.2" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="Plantilla\Plantilla_Laura_Proyecto.docx" sap:VirtualizedContainerService.HintSize="986.4,2283.2" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="994.4,2953.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="952.8,2173.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:WordSetBookmarkContent BookmarkName="precipitaciones" BookmarkText="[arg_precipitaciones]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_12" />
-            <p:WordSetBookmarkContent BookmarkName="humedad" BookmarkText="[arg_humedad]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_13" />
-            <p:WordSetBookmarkContent BookmarkName="viento" BookmarkText="[arg_viento]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_14" />
-            <p:WordSetBookmarkContent BookmarkName="grados" BookmarkText="[arg_grados]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_11" />
-            <p:WordSetBookmarkContent BookmarkName="localidad" BookmarkText="[arg_localidad]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_1" />
-            <If Condition="[arg_existeCorreo]" sap:VirtualizedContainerService.HintSize="952.8,740" sap2010:WorkflowViewState.IdRef="If_2">
-              <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="475.2,590.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <p:WordSetBookmarkContent BookmarkName="asunto" BookmarkText="[arg_asunto]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_2" />
-                  <p:WordSetBookmarkContent BookmarkName="descripcion" BookmarkText="[arg_mensaje]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_3" />
-                  <p:WordSetBookmarkContent BookmarkName="emisor" BookmarkText="[arg_correoDe]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_5" />
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <p:WordSetBookmarkContent BookmarkName="nohaycorreo" BookmarkText="¡No tiene correos nuevos!" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_17" />
-              </If.Else>
-            </If>
-            <p:WordSetBookmarkContent BookmarkName="elDiaEstara" BookmarkText="[arg_elDiaEstara]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_4" />
-            <p:WordSetBookmarkContent BookmarkName="grados" BookmarkText="[arg_grados]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_7" />
+            <p:WordSetBookmarkContent BookmarkName="precipitaciones" BookmarkText="[arg_precipitaciones]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_12" />
+            <p:WordSetBookmarkContent BookmarkName="humedad" BookmarkText="[arg_humedad]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_13" />
+            <p:WordSetBookmarkContent BookmarkName="viento" BookmarkText="[arg_viento]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_14" />
+            <p:WordSetBookmarkContent BookmarkName="grados" BookmarkText="[arg_grados]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_11" />
+            <p:WordSetBookmarkContent BookmarkName="localidad" BookmarkText="[arg_localidad]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_1" />
+            <p:WordSetBookmarkContent BookmarkName="elDiaEstara" BookmarkText="[arg_elDiaEstara]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_4" />
+            <p:WordSetBookmarkContent BookmarkName="grados" BookmarkText="[arg_grados]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_7" />
             <p:WordSetBookmarkContent BookmarkName="priact" BookmarkText="[arg_entregaUno]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_8" />
             <p:WordSetBookmarkContent BookmarkName="segunact" BookmarkText="[arg_entregaDos]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_9" />
             <p:WordSetBookmarkContent BookmarkName="terceract" BookmarkText="[arg_entradaTres]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="911.2,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_10" />
